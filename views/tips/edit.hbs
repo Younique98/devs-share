@@ -1,10 +1,11 @@
 <h3>Edit Tip</h3>
 <div class="row">
-    <form action="/tips/{{Tip._id}}" method="POST" class="col s12">
+    
+    <form action="/tips/{{tip._id}}" method="POST" class="col s12">
         <input type="hidden" name="_method" value="PUT">
         <div class="row">
             <div class="input-field">
-                <input type="text" id="title" name="title" value="{{Tip.title}}">
+                <input type="text" id="title" name="title" value="{{tip.title}}">
                 <label for="title">Title</label>
             </div>
         </div>
@@ -12,7 +13,7 @@
         <div class="row">
             <div class="input-field">
                 <select id="status" name="status">
-                    {{#select Tip.status}}
+                    {{#select tip.status}}
                     <option value="public" selected>Public</option>
                     <option value="private">Private</option>
                     {{/select}}
@@ -24,7 +25,7 @@
         <div class="row">
             <div class="input-field">
                 <h5>Tell Us Your Tip:</h5>
-                <textarea id="body" name="body">{{Tip.body}}</textarea>
+                <textarea id="body" name="body">{{tip.body}}</textarea>
             </div>
         </div>
 

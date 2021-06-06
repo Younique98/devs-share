@@ -1,13 +1,17 @@
 <h1>Tips</h1>
 <div class="row">
-    {{#each tips}}
+    {{#each tips}} 
     <div class="col s12 m4">
         <div class="card">
             <div class="card-image">
+                {{!-- //this user on line 8 refers to the tip user and ../user refer to user out of the loop and grab the logged in user --}}
+                {{!-- using triple curly brackets to parse html below --}}
                 {{{editIcon user ../user _id}}}
+
             </div>
             <div class="card-content center-align">
                 <h5>{{title}}</h5>
+                {{!-- wrap them in both the helpers --}}
                 <p>{{stripTags (truncate body 150)}}</p>
                 <br>
                 <div class="chip">
